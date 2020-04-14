@@ -1,15 +1,20 @@
-﻿
+﻿@using WebApplication1.Models;
+@model IEnumerable<Department>
 @{
-    ViewBag.Title = "Countries List";
-   
-
+    ViewBag.Title = "Departments List";
 }
 
-<h2>Countries List</h2>
+<!DOCTYPE html>
+
+<h2>Departments List</h2>
+
 <ul>
-    @foreach(string country in ViewBag.Countries)
+    @foreach (Department department in @Model)
     {
-        <li>@country</li>
+        <li>
+            @Html.ActionLink(department.Name, "Index", "Employee", new { departmentId = department.ID }, null)
+        </li>
     }
 </ul>
+
 

@@ -7,7 +7,7 @@
     <table>
         <tr>
             <td>
-                <b>Employee Id</b>
+                <b>Employee Id: </b>
             </td>
             <td>
                 @Model.EmployeeId
@@ -15,7 +15,7 @@
         </tr>
         <tr>
             <td>
-                <b>Name</b>
+                <b>Name: </b>
             </td>
             <td>
                 @Model.Name
@@ -23,7 +23,7 @@
         </tr>
         <tr>
             <td>
-                <b>Gender</b>
+                <b>Gender: </b>
             </td>
             <td>
                 @Model.Gender
@@ -31,13 +31,13 @@
         </tr>
         <tr>
             <td>
-                <b>City</b>
+                <b>City: </b>
             </td>
             <td>
                 @Model.City
             </td>
         </tr>
     </table>
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Back to List", "Index",new { departmentId = @Model.DepartmentId })
 </div>
 
